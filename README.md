@@ -6,7 +6,8 @@ Routing: Ui-Router
 
 IDE: Visual Studio 2013.
 
-1. Run BookStore.WebAPI
-2. Run BookStore.SPA.uiRouter 
-
+1. Follow instruction.docx for changing connectiostring
+2. Run BookStore.WebAPI
+3. Run BookStore.SPA.uiRouter 
+ 
 
