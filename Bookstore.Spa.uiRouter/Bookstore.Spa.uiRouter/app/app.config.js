@@ -41,7 +41,8 @@
         state('/books', {
             url: '/books/:authorId',
             templateUrl: 'app/books/books.html',
-            controller: 'BooksController'
+            controller: 'BooksController',
+            controllerAs: 'vm'
         });
 
         $urlRouterProvider.otherwise('/authors');

@@ -14,7 +14,7 @@
             </div>
             <div class="pull-right">
                 <div class="form-group">
-                    <input type="text" class="form-control" ng-model="authorName" placeholder="Search">
+                    <input type="text" class="form-control" ng-model="authorSearch" placeholder="Search">
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <tbody>
                     <!--ui-sref="/author({authorId : a.AuthorId})"-->
                     <!--such-href="/author({authorId : a.AuthorId})" does not work-->
-                    <tr ng-repeat="a in author.authorsList | filter : authorName" ui-sref="/author({authorId : a.AuthorId})" style="cursor:pointer">
+                    <tr ng-repeat="a in author.authorsList | filter : authorSearch" ui-sref="/author({authorId : a.AuthorId})" style="cursor:pointer">
                         <td>{{a.FirstName}}</td>
                         <td>{{a.LastName}}</td>
                         <td>{{a.Initials}}</td>

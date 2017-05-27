@@ -65,12 +65,16 @@
     <Content Include="app\authors\authors.html" />
     <Content Include="app\authors\delete.author.html" />
     <Content Include="app\authors\delete.controller.js" />
+    <Content Include="app\books\books.controller.js" />
     <Content Include="app\books\books.html" />
     <Content Include="app\components\authornav.directive.js" />
+    <Content Include="app\components\filemodel.directive.js" />
     <Content Include="app\components\nav.directive.html" />
     <Content Include="app\components\nav.directive.js" />
     <Content Include="app\components\suchhref.directive.js" />
     <Content Include="app\services\author.service.js" />
+    <Content Include="app\services\book.service.js" />
+    <Content Include="app\services\fileupload.service.js" />
     <Content Include="app\services\logger.service.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
