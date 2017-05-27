@@ -3,3 +3,8 @@ C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bi
 C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bin\Bookstore.Spa.uiRouter.pdb
 C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\obj\Debug\Bookstore.Spa.uiRouter.dll
 C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\obj\Debug\Bookstore.Spa.uiRouter.pdb
+D:\Github\BookStore_Using_Ui-Router_Angularjs\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bin\Bookstore.Spa.uiRouter.dll.config
+D:\Github\BookStore_Using_Ui-Router_Angularjs\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bin\Bookstore.Spa.uiRouter.dll
+D:\Github\BookStore_Using_Ui-Router_Angularjs\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bin\Bookstore.Spa.uiRouter.pdb
+D:\Github\BookStore_Using_Ui-Router_Angularjs\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\obj\Debug\Bookstore.Spa.uiRouter.dll
+D:\Github\BookStore_Using_Ui-Router_Angularjs\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\obj\Debug\Bookstore.Spa.uiRouter.pdb

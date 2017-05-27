@@ -68,7 +68,6 @@
     <Content Include="app\books\books.controller.js" />
     <Content Include="app\books\books.html" />
     <Content Include="app\components\authornav.directive.js" />
-    <Content Include="app\components\filemodel.directive.js" />
     <Content Include="app\components\nav.directive.html" />
     <Content Include="app\components\nav.directive.js" />
     <Content Include="app\components\suchhref.directive.js" />
@@ -76,8 +75,12 @@
     <Content Include="app\services\book.service.js" />
     <Content Include="app\services\fileupload.service.js" />
     <Content Include="app\services\logger.service.js" />
+    <Content Include="app\services\pager.service.js" />
+    <Content Include="Content\image\icon_image.jpg" />
+    <Content Include="favicon.ico" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
+    <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -108,11 +111,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
-    <Content Include="Content\image\icon_image.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
-    <Content Include="MyScripts\App.js" />
-    <Content Include="MyScripts\Service.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -891,21 +891,13 @@
     <Content Include="Scripts\ng-file-upload.js" />
     <Content Include="Scripts\ng-file-upload.min.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.12.1.min.js" />
-    <Content Include="Views\Author\AddAuthor.html" />
-    <Content Include="Views\Author\AuthorList.html" />
-    <Content Include="Views\Author\DeleteAuthor.html" />
-    <Content Include="Views\Author\DetailAuthor.html" />
-    <Content Include="Views\Author\EditAuthor.html" />
-    <Content Include="Views\Book\BookList.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Files\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

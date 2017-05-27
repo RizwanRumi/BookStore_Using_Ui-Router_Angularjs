@@ -1,10 +1,11 @@
 ﻿
+
 <div>
     <br />
     <index-nav id="indexnav"></index-nav>
 </div>
 
-<div ng-controller="AuthorsController as author">
+<div ng-controller="AuthorsController as vm">
    
     <div class="panel">
 
@@ -30,36 +31,51 @@
                         <th>Address</th>
                         <th>Zip Code</th>
                         <th>Country</th>
-                        <!--<th>Action</th>-->
                     </tr>
                 </thead>
-                <tbody>
-                    <!--ui-sref="/author({authorId : a.AuthorId})"-->
-                    <!--such-href="/author({authorId : a.AuthorId})" does not work-->
-                    <tr ng-repeat="a in author.authorsList | filter : authorSearch" ui-sref="/author({authorId : a.AuthorId})" style="cursor:pointer">
+                <tbody>                  
+                    <!--such-href="/author({authorId : a.AuthorId})" -> this directive tried, but does not work-->
+                    <tr ng-repeat="a in vm.authorsList | filter : authorSearch" ui-sref="/author({authorId : a.AuthorId})" style="cursor:pointer">
                         <td>{{a.FirstName}}</td>
                         <td>{{a.LastName}}</td>
                         <td>{{a.Initials}}</td>
                         <td>{{a.Address}}</td>
                         <td>{{a.ZipCode}}</td>
                         <td>{{a.Country}}</td>
-
                     </tr>
-                    <tr ng-if="Authors.length==0">
+                    <tr ng-if="vm.authorsList.length==0">
                         <td colspan="4" class="text-center">There have no Author to display.</td>
                     </tr>
                 </tbody>
             </table>
-
             
-            <pre>Showing Total: {{author.TotalData.length}}</pre>
-            <pagination ng-model="vm.currentPage"
-                        total-items="author.TotalData.length"
-                        max-size="maxSize"
-                        boundary-links="true">
-            </pagination>
-        </div>
+            <pre>Showing Total: {{vm.authorsList.length}}</pre>
 
+            <div class="text-center">
+                <!-- pager -->
+                <ul ng-if="vm.pager.pages.length" class="pagination">
+                    <li ng-class="{disabled:vm.pager.currentPage === 1}">
+                        <a ng-click="vm.setPage(1)">First</a>
+                    </li>
+                    <li ng-class="{disabled:vm.pager.currentPage === 1}">
+                        <a ng-click="vm.setPage(vm.pager.currentPage - 1)">Previous</a>
+                    </li>
+                    <li ng-repeat="page in vm.pager.pages" ng-class="{active:vm.pager.currentPage === page}">
+                        <a ng-click="vm.setPage(page)">{{page}}</a>
+                    </li>
+                    <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
+                        <a ng-click="vm.setPage(vm.pager.currentPage + 1)">Next</a>
+                    </li>
+                    <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
+                        <a ng-click="vm.setPage(vm.pager.totalPages)">Last</a>
+                    </li>
+                </ul>
+            </div>
+           
+        </div>
+       
+        
+    </div>
 
     </div>
 

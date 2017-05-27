@@ -3,6 +3,6 @@
 (function () {
     'use strict';
 
-    angular.module('myApp', ['ui.router', 'ui.bootstrap']);
+    angular.module('myApp', ['ui.router']);
 
 })();

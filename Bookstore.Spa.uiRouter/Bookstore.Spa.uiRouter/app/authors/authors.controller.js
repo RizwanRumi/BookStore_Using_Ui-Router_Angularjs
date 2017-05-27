@@ -5,34 +5,42 @@
    angular.module('myApp')
     .controller('AuthorsController', AuthorsController);
 
-   AuthorsController.$inject = ['$location', '$window', 'authorservice', 'logger'];
+   AuthorsController.$inject = ['$location', '$window', 'pagerService', 'authorservice', 'logger'];
 
-   function AuthorsController($location, $window, authorservice, logger) {
+   function AuthorsController($location, $window, pagerService, authorservice, logger) {
         var vm = this;
-        vm.authorsList = [];
+        vm.authorsList = [];       
         vm.Message = "";
+    
+        vm.totalData = [];
+        vm.pager = {};
+        vm.setPage = setPage;
 
-        vm.$onInit = function () {
+
+     vm.$onInit = function () {
 
             authorservice.getAuthors()
                 .then(function (data) {
-                   // vm.authorsList = data;
-
-                    vm.TotalData = data;
-
-                    vm.currentPage = 1;
-                    vm.numPerPage = 5;
-                    vm.maxSize = 5;
+                    vm.totalData = data;
                     vm.totalCount = data.length;
-
-                 //   vm.$watch('currentPage + numPerPage', function () {
-                        var begin = ((vm.currentPage - 1) * vm.numPerPage)
-                        , end = begin + vm.numPerPage;
-
-                        vm.authorsList = vm.TotalData.slice(begin, end);
-                 //   });
+                    vm.setPage(1);
                 });
+
+          
         };
+
+        function setPage(page) {
+               
+            if (page < 1 || page > vm.pager.totalPages) {
+                return;
+            }
+           
+            // get pager object from service
+            vm.pager = pagerService.GetPager(vm.totalData.length, page);
+
+            // get current page of items
+            vm.authorsList = vm.totalData.slice(vm.pager.startIndex, vm.pager.endIndex + 1);
+        }
         
         vm.states = {
             clearAuthorForm: false,
