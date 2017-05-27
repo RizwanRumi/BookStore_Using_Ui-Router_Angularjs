@@ -1,0 +1,139 @@
+﻿
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Author Details</h3>
+
+            <div class="row">
+                <div class="col-lg-9">
+                    <h1><b>{{Author.FirstName}}&nbsp;{{Author.LastName}}</b></h1>
+                </div>
+
+                <div class="col-lg-3">
+
+                    <a href="#!/Delete/{{Author.AuthorId}}" class="btn btn-md btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>Delete
+                    </a>
+                    &#09;&#09;
+                   
+                    <button type="button" class="btn btn-md btn-warning" data-toggle="modal" data-target="#editAuthorModal" ng-click="EditAuthorModel(Author)"><span class="glyphicon glyphicon-pencil"></span>Edit</button>
+                  
+
+                    <!--<a href="#!/Edit/{{Author.AuthorId}}" class="btn btn-md btn-warning">
+                        <span class="glyphicon glyphicon-pencil"></span>Edit
+                    </a>-->
+
+                </div>
+
+
+
+            </div>
+
+    </div>
+
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table  table-bordered">
+                <thead>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <h3>Name</h3>
+                                {{Author.Initials}}&nbsp;{{Author.FirstName}}&nbsp;{{Author.LastName}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Address</h3>
+                            <span>House: {{Author.Address}} </span> <br />
+                            <span>Zip Code: {{Author.ZipCode}}</span> <br />
+                            <span>Country: {{Author.Country}}</span>
+                        </td>
+                    </tr>
+                    
+                    
+
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pull-right">
+            <a href="#!/" class="btn  btn-md btn-primary">Back To List</a>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editAuthorModal" tabindex="-1" role="dialog" aria-labelledby="editCategoryModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Edit Authority</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Initials:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="initials" ng-model="EditAuthormdl.Initials" ng-keyup="errorInitStateChange(EditAuthormdl.Initials)" aria-describedby=" addInitials" placeholder="Please Set Initials" required="required">
+                                <div class="text-danger" ng-if="states.errorInitials">Please field required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">First Name:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="firstName" ng-model="EditAuthormdl.FirstName" ng-keyup="errorFNameStateChange(EditAuthormdl.FirstName)" aria-describedby=" addFirstName" placeholder="Please Set First Name" required="required">
+                                <div class="text-danger" ng-if="states.errorFirstName">Please field required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Last Name:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="lastName" ng-model="EditAuthormdl.LastName" ng-keyup="errorLNameStateChange(EditAuthormdl.LastName)" aria-describedby=" addLastName" placeholder="Please Set LastName Name" required="required">
+                                <div class="text-danger" ng-if="states.errorLastName">Please field required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Address:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="address" ng-model="EditAuthormdl.Address" ng-keyup="errorAdrStateChange(EditAuthormdl.Address)" aria-describedby=" addAddress" placeholder="Please Set Address" required="required">
+                                <div class="text-danger" ng-if="states.errorAddress">Please field required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Zip Code:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="zidcode" ng-model="EditAuthormdl.ZipCode" ng-keyup="errorZipStateChange(EditAuthormdl.ZipCode)" aria-describedby=" addZipCode" placeholder="Please Set Zip Code" required="required">
+                                <div class="text-danger" ng-if="states.errorZipCode">Please field required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Country:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="country" ng-model="EditAuthormdl.Country" ng-keyup="errorCntryStateChange(EditAuthormdl.Country)" aria-describedby=" addCountry" placeholder="Please Set Country Name" required="required">
+                                <div class="text-danger" ng-if="states.errorCountry">Please field required.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div id="emsgView" class='alert alert-block alert-dismissable fade in' style="text-align:center;">{{Message}}</div>
+                    <button type="button" class="btn btn-primary" ng-click="updateAuthor(EditAuthormdl)"> Edit</button>
+                    <button type="button" class="btn btn-default" ng-click="clearAuthorForm(false)" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

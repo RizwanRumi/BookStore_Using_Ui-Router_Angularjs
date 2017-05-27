@@ -1,0 +1,5 @@
+C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bin\Bookstore.Spa.uiRouter.dll.config
+C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bin\Bookstore.Spa.uiRouter.dll
+C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\bin\Bookstore.Spa.uiRouter.pdb
+C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\obj\Debug\Bookstore.Spa.uiRouter.dll
+C:\Users\Dell\Desktop\Bookstore\Bookstore.Spa.uiRouter\Bookstore.Spa.uiRouter\obj\Debug\Bookstore.Spa.uiRouter.pdb

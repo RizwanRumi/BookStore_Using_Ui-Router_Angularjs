@@ -1,0 +1,70 @@
+﻿
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Do You Want to Delete?
+        </h3>
+
+        <div class="row">
+            <div class="col-lg-9">
+                <h3><b>{{Author.FirstName}}&nbsp;{{Author.LastName}}</b></h3>
+            </div>
+
+            <div class="col-lg-3">
+
+                <a href="#!/Details/{{Author.AuthorId}}" class="btn  btn-md btn-primary"> < Back</a>
+                &#09;&#09;
+
+                <button type="button" class="btn btn-md btn-danger" ng-click="deleteAuthor(Author.AuthorId)"><span class="glyphicon glyphicon-pencil"></span>Delete</button>
+
+
+                <!--<a href="#!/Edit/{{Author.AuthorId}}" class="btn btn-md btn-warning">
+                    <span class="glyphicon glyphicon-pencil"></span>Edit
+                </a>-->
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table  table-bordered">
+                <thead>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <h3>Name</h3>
+                            {{Author.Initials}}&nbsp;{{Author.FirstName}}&nbsp;{{Author.LastName}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Address</h3>
+                            <span>House: {{Author.Address}} </span> <br />
+                            <span>Zip Code: {{Author.ZipCode}}</span> <br />
+                            <span>Country: {{Author.Country}}</span>
+                        </td>
+                    </tr>
+
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+
+    
+</div>
+
